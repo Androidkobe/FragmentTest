@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/add1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加a" />
+
+    <Button
+        android:id="@+id/add2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加b"
+        app:layout_constraintLeft_toRightOf="@+id/add1" />
+
+    <Button
+        android:id="@+id/add3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加c"
+        app:layout_constraintLeft_toRightOf="@+id/add2" />
+
+    <Button
+        android:id="@+id/add4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加d"
+        app:layout_constraintLeft_toRightOf="@+id/add3" />
+
+    <Button
+        android:id="@+id/savestark1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="存入栈1"
+        app:layout_constraintTop_toBottomOf="@+id/add1" />
+
+    <Button
+        android:id="@+id/savestark2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="存入栈2"
+        app:layout_constraintLeft_toRightOf="@+id/savestark1"
+        app:layout_constraintTop_toBottomOf="@+id/add1" />
+
+    <Button
+        android:id="@+id/stark1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="恢复栈1"
+        app:layout_constraintTop_toBottomOf="@+id/savestark1" />
+
+    <Button
+        android:id="@+id/stark2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="恢复栈2"
+        app:layout_constraintLeft_toRightOf="@+id/stark1"
+        app:layout_constraintTop_toBottomOf="@+id/savestark1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
